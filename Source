@@ -1,0 +1,74 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Grasslands = Instance.new("TextButton")
+local Desert = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 11, 255)
+Frame.Position = UDim2.new(0, 0, 0.345901638, 0)
+Frame.Size = UDim2.new(0, 180, 0, 341)
+
+Grasslands.Name = "Grasslands"
+Grasslands.Parent = Frame
+Grasslands.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Grasslands.Position = UDim2.new(0, 0, 0.231671557, 0)
+Grasslands.Size = UDim2.new(0, 180, 0, 30)
+Grasslands.Font = Enum.Font.SourceSans
+Grasslands.Text = "Win grasslands race"
+Grasslands.TextColor3 = Color3.fromRGB(0, 0, 0)
+Grasslands.TextSize = 14.000
+Grasslands.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1686.07, 2.3, -5946)
+	wait(0.1)
+end)
+
+Desert.Name = "Desert"
+Desert.Parent = Frame
+Desert.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Desert.Position = UDim2.new(0, 0, 0.369501472, 0)
+Desert.Size = UDim2.new(0, 180, 0, 30)
+Desert.Font = Enum.Font.SourceSans
+Desert.Text = "Win desert race"
+Desert.TextColor3 = Color3.fromRGB(0, 0, 0)
+Desert.TextSize = 14.000
+Desert.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.3109, 36.36, -8680)
+	wait(0.1)
+end)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel.Position = UDim2.new(0, 0, 0.0645161271, 0)
+TextLabel.Size = UDim2.new(0, 180, 0, 28)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Welcome"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function UISVV_fake_script() -- Grasslands.GrasslandsScript 
+	local script = Instance.new('Script', Grasslands)
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1686.07, 2.3, -5946)
+	wait(0.1)
+end
+coroutine.wrap(UISVV_fake_script)()
+local function MPJYIBJ_fake_script() -- Desert.DesertScript 
+	local script = Instance.new('Script', Desert)
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.3109, 36.36, -8680)
+	wait(0.1)
+end
+coroutine.wrap(MPJYIBJ_fake_script)()
